@@ -19,7 +19,7 @@ This is a **Windows Batch Script** that displays the directory structure of all 
 3. The process continues for all detected drives, ensuring **dynamic color changes**.
 
 ## 🛠 Usage Instructions
-1. **Download or Copy** the `random_text_tree.bat` file.
+1. **Download or Copy** the `Refresh.bat` file.
 2. **Run the script**:
    - **Double-click** the `.bat` file.
    - The command prompt will open and show **random-colored directory trees** for all available drives.
