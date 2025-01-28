@@ -1,42 +1,44 @@
-### **Random Text Color Tree View Script**
+### 📝 **README.md** (Markdown ফাইল)  
 
-This script is a **Windows batch file** that displays a directory tree (`tree` command) of specific drives (C:, D:, E:, H:) with **random text colors** each time it is executed, while keeping the **background color black**. The script randomly selects a color for the text and displays the structure of the directories in that color.
+```md
+# 🎨 Random Text Color Tree View Script
 
----
+This is a **Windows Batch Script** that displays the directory structure of all available drives (**C to Z**) with **random text colors** each time it is executed. The script ensures that only **existing drives** are processed, keeping the background black while changing the text color randomly.
 
-#### **Features:**
-- **Random Text Color:** Every time the script runs, it changes the color of the text for the directory tree output.
-- **Black Background:** The background remains black to keep a consistent appearance, with only the text color changing.
-- **Supports Multiple Drives:** The script shows the directory tree for drives C:, D:, E:, and H:.
-- **Simple to Use:** Just double-click the batch file to run it, and enjoy the colorful directory tree view.
+## 🚀 Features
+- **Random Text Color** 🎨: Every drive tree output appears in a different random text color.
+- **Supports All Drives (C-Z)** 🔠: Automatically detects and displays the directory tree for all available drives.
+- **Keeps Background Black** 🖤: Only the text color changes for better visibility.
+- **Fully Automated** 🤖: No manual input needed; just run the script.
 
----
+## 📌 How It Works
+1. The script **checks for all drives from C to Z**.
+2. If a drive exists, it:
+   - Assigns a **random text color**.
+   - Displays the **directory tree** using the `tree` command.
+3. The process continues for all detected drives, ensuring **dynamic color changes**.
 
-#### **Usage Instructions:**
+## 🛠 Usage Instructions
+1. **Download or Copy** the `random_text_tree.bat` file.
+2. **Run the script**:
+   - **Double-click** the `.bat` file.
+   - The command prompt will open and show **random-colored directory trees** for all available drives.
+3. **Exit**: Press any key when prompted.
 
-1. **Download the Script**: Download the `random_text_tree.bat` file.
-2. **Run the Script**: 
-   - Double-click the `.bat` file.
-   - It will display the directory tree of C:, D:, E:, and H: drives with randomly changing text colors.
+## 🎯 Customization
+- **Change Available Colors**:
+  - Modify the `set colors=0A 0B 0C 0D 0E 0F 09` line to include your preferred color codes.
+  - Windows color codes range from `0` to `F`. (`0` = Black, `F` = White, etc.).
+  
+- **Limit to Specific Drives**:
+  - Instead of scanning all (`C-Z`), edit the `for %%D in (...)` section to include only desired drives (e.g., `C D E`).
 
-3. **What Happens When You Run It?**  
-   - The script first shows a header with a random text color.
-   - Then, it sequentially shows the directory tree for the specified drives with different random text colors each time.
-
----
-
-#### **Customization:**
-- You can modify the list of available colors by editing the `set colors` line in the script. Currently, it supports 7 text color codes, but you can add or remove colors as desired.
-- To add more drives, just replicate the lines calling `tree` with the desired drive letter and `call :SetRandomTextColor`.
-
----
-
-#### **Example Output:**
+## 🔥 Example Output
 ```
  ----------------------------------
  |  Random Text Color Tree View Script  |
  ----------------------------------
- 
+
 Showing Tree for C:\
 <Directory tree structure for C:>
 
@@ -46,15 +48,13 @@ Showing Tree for D:\
 Showing Tree for E:\
 <Directory tree structure for E:>
 
-Showing Tree for H:\
-<Directory tree structure for H:>
-
 Done! Press any key to exit.
 ```
 
----
-
-#### **License:**
-This script is provided free of charge. You can modify and distribute it as per your needs.
+## 📜 License
+This script is **free to use and modify**. Feel free to enhance it as needed! 😊
 
 ---
+
+✨ **Enjoy a colorful directory tree experience!** 🎨🚀
+```
