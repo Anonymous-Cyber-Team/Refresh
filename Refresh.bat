@@ -15,24 +15,16 @@ echo  ^|  Random Text Color Tree View Script  ^|
 echo  ----------------------------------
 echo.
 
-:: প্রতিটি ড্রাইভের জন্য আলাদা টেক্সট রঙ সেট করা
-call :SetRandomTextColor
-echo Showing Tree for C:\
-tree C:\
+:: C থেকে Z পর্যন্ত প্রতিটি ড্রাইভের জন্য টেক্সট রঙ সেট করা
+for %%D in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+    if exist %%D:\ (
+        call :SetRandomTextColor
+        echo Showing Tree for %%D:\
+        tree %%D:\
+        echo.
+    )
+)
 
-call :SetRandomTextColor
-echo Showing Tree for D:\
-tree D:\
-
-call :SetRandomTextColor
-echo Showing Tree for E:\
-tree E:\
-
-call :SetRandomTextColor
-echo Showing Tree for H:\
-tree H:\
-
-echo.
 echo Done! Press any key to exit.
 pause
 exit
